@@ -32,25 +32,10 @@ cd filesort
 
 ## 2. Run the Script
 
-#### 🍎 macOS
-No changes needed. The script automatically detects your Downloads folder:
+The script automatically detects your Downloads folder and Organises it:
 
 Just run
 
 ```bash
 python3 filesort.py
-```
-
-### 🪟 Windows
-Edit the path then run e.g.
-```bash
-downloads_path = r"C:\Users\YourUsername\Downloads"
-python filesort.py
-```
-
-### 🐧 Linux
-Edit the path then run e.g.
-```bash
-python3 filesort.py
-downloads_path = "/home/yourusername/Downloads"
 ```
