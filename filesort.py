@@ -1,9 +1,23 @@
 import os
 import shutil
 from pathlib import Path
+import platform
 
-# Path to Downloads folder
-downloads_path = str(Path.home() / "Downloads")
+# Determine the platform (Windows, macOS, or Linux)
+current_platform = platform.system()
+
+# Set the downloads path depending on the platform
+if current_platform == "Darwin":  # macOS
+    downloads_path = str(Path.home() / "Downloads")
+elif current_platform == "Windows":
+    downloads_path = str(Path.home() / "Downloads")  
+elif current_platform == "Linux":
+    downloads_path = str(Path.home() / "Downloads")  
+else:
+    raise Exception("Unsupported OS")
+
+# Now, you can use the `downloads_path` variable for file sorting
+print(f"Downloads path is set to: {downloads_path}")
 
 # File type mappings
 file_types = {
