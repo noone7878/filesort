@@ -2,7 +2,7 @@
 
 Organize your cluttered Downloads folder in one click!  
 This script sorts **images**, **videos**, and **PDFs** into separate folders.  
-Works on **macOS** and **Windows**.
+Works on **macOS**, **Windows** and **Linux**.
 
 ---
 
