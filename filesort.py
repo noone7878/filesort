@@ -1,7 +1,7 @@
 import os
+import platform
 import shutil
 from pathlib import Path
-import platform
 
 # Determine the platform (Windows, macOS, or Linux)
 current_platform = platform.system()
@@ -10,9 +10,9 @@ current_platform = platform.system()
 if current_platform == "Darwin":  # macOS
     downloads_path = str(Path.home() / "Downloads")
 elif current_platform == "Windows":
-    downloads_path = str(Path.home() / "Downloads")  
+    downloads_path = str(Path.home() / "Downloads")
 elif current_platform == "Linux":
-    downloads_path = str(Path.home() / "Downloads")  
+    downloads_path = str(Path.home() / "Downloads")
 else:
     raise Exception("Unsupported OS")
 
@@ -21,12 +21,24 @@ print(f"Downloads path is set to: {downloads_path}")
 
 # File type mappings
 file_types = {
-    "Images": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp", ".heic", ".svg", ".HEIC"],
+    "Images": [
+        ".jpg",
+        ".jpeg",
+        ".png",
+        ".gif",
+        ".bmp",
+        ".webp",
+        ".heic",
+        ".svg",
+        ".HEIC",
+    ],
     "Documents": [".doc", ".docx", ".txt", ".odt", ".xls", ".xlsx", ".ppt", ".pptx"],
     "Archives": [".zip", ".tar", ".gz", ".bz2", ".rar", ".7z"],
     "Audio": [".mp3", ".wav", ".aac", ".ogg", ".flac"],
     "Videos": [".mp4", ".mov", ".avi", ".mkv", ".flv"],
-    "PDFs": [".pdf"]
+    "PDFs": [".pdf"],
+    "App": [".dmg", ".exe"],
+    "OS": [".iso"],
 }
 
 # Organize files
